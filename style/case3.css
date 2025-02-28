@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+.fixed-area {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.circle {
+    inset: 0;
+    margin: auto;
+    position: absolute;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: 10px solid brown;
+    border-radius: 100px;
+}
+
+.circle::before {
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    width: 163px;
+    height: 163px;
+    border: 10px solid crimson;
+    inset: 0;
+    margin: auto;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.circle-area .container div {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.circle-area .container:first-child div {
+    background-color: purple;
+}
+.circle-area .container:nth-child(2) div {
+    background-color: blue;
+}
+
+.circle-area .container:nth-child(3) div {
+    background-color: red;
+}
+
+.scrolls {
+    z-index: -1;
+    width: 164px;
+    height: 164px;
+    border-radius: 100px;
+}
+
+.scrolls h1 {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    line-height: 164px;
+}
+
+.circle-area .container:nth-child(3) div h1 {
+    height: 70px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    line-height: normal;
+}
